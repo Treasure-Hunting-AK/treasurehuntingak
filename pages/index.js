@@ -8,12 +8,11 @@ export default function Home() {
         <title>Treasure Hunting AK</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <main className={styles.main}>
+      
+      <header className={styles.header}>
         <h1 className={styles.title}>Welcome to Treasure Hunting AK</h1>
-
         <p className={styles.description}>Discover Alaska</p>
-      </main>
+      </header>
     </div>
   );
 }
