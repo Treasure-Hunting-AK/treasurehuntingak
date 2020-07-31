@@ -20,7 +20,7 @@ export default function Home() {
           </Link>
           <Link href='/contact'>
             <div className={styles.card}>
-              <h3>Contact us</h3>
+              <h3>Contact Us</h3>
             </div>
           </Link>
           <Link href='/shop'>
