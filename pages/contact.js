@@ -1,5 +1,5 @@
-import Nav from '../components/nav'
-import styles from '../styles/contact.module.css'
+import Nav from '../components/nav';
+import styles from '../styles/contact.module.css';
 
 export default function contact() {
   return (
@@ -9,5 +9,5 @@ export default function contact() {
         <h2>Contact</h2>
       </main>
     </React.Fragment>
-  )
+  );
 }
