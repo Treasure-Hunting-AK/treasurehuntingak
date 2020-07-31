@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -8,11 +9,27 @@ export default function Home() {
         <title>Treasure Hunting AK</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      
-      <header className={styles.header}>
+      <main className={styles.header}>
         <h1 className={styles.title}>Welcome to Treasure Hunting AK</h1>
         <p className={styles.description}>Discover Alaska</p>
-      </header>
+        <section className={styles.grid}>
+          <Link href='/'>
+            <div className={styles.card}>
+              <h3>About Us</h3>
+            </div>
+          </Link>
+          <Link href='/'>
+            <div className={styles.card}>
+              <h3>Contact us</h3>
+            </div>
+          </Link>
+          <Link href='/'>
+            <div className={styles.card}>
+              <h3>Shop</h3>
+            </div>
+          </Link>
+        </section>
+      </main>
     </div>
   );
 }
