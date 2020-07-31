@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to Treasure Hunting AK</h1>
         <p className={styles.description}>Discover Alaska</p>
         <section className={styles.grid}>
-          <Link href='/'>
+          <Link href='/about'>
             <div className={styles.card}>
               <h3>About Us</h3>
             </div>
