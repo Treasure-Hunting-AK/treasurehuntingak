@@ -8,6 +8,14 @@ export default function Nav() {
       <Link href='/'>
         <h1>Treasure Hunting AK</h1>
       </Link>
+      <nav className={styles.nav}>
+        <p>
+          <Link href='/contact'>Contact Us</Link>
+        </p>
+        <p>
+          <Link href='/shop'>Shop</Link>
+        </p>
+      </nav>
     </header>
   );
 }
