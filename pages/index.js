@@ -18,12 +18,12 @@ export default function Home() {
               <h3>About Us</h3>
             </div>
           </Link>
-          <Link href='/'>
+          <Link href='/contact'>
             <div className={styles.card}>
               <h3>Contact us</h3>
             </div>
           </Link>
-          <Link href='/'>
+          <Link href='/shop'>
             <div className={styles.card}>
               <h3>Shop</h3>
             </div>
