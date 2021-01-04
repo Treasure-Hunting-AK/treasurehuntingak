@@ -1,11 +1,20 @@
 import Head from 'next/head';
-import { AppBar, Slide, Toolbar } from '@material-ui/core';
+import {
+  AppBar,
+  makeStyles,
+  Slide,
+  Toolbar,
+  Typography,
+} from '@material-ui/core';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import styles from '../styles/nav.module.css';
+import RouterLink from './global/RouterLink';
+
+const useStyles = makeStyles(() => {});
 
 export default function Nav() {
   const router = useRouter();
+  const styles = useStyles();
+
   return (
     <>
       <Head>
@@ -14,13 +23,24 @@ export default function Nav() {
       <Slide in={router.pathname !== '/'}>
         <AppBar position="fixed">
           <Toolbar>
-            <Link href="/">
-              <h1>Treasure Hunting AK</h1>
-            </Link>
+            <RouterLink href="/">
+              <Typography variant="h5" component="h1" color="textPrimary">
+                Treasure Hunting AK
+              </Typography>
+            </RouterLink>
             <nav className={styles.nav}>
-              <Link href="/contact">Contact Us</Link>
-              <Link href="/about">About Us</Link>
-              <Link href="/shop">Shop</Link>
+              <RouterLink href="/contact" color="secondary">
+                Contact
+              </RouterLink>
+              <RouterLink href="/" color="secondary">
+                Home
+              </RouterLink>
+              <RouterLink href="/about" color="secondary">
+                About
+              </RouterLink>
+              <RouterLink href="/shop" color="secondary">
+                Shop
+              </RouterLink>
             </nav>
           </Toolbar>
         </AppBar>
