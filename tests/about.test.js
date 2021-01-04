@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 import { render } from '@testing-library/react';
-import App from '../pages/index';
+import About from '../pages/about';
 
-describe('Index.js', () => {
+describe('pages/about.js', () => {
   it('renders correctly', () => {
-    const tree = render(<App />);
+    const tree = render(<About />);
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/about.js renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <header>
+        <h1>
+          Treasure Hunting AK
+        </h1>
+        <nav>
+          <p>
+            <a
+              href="/contact"
+            >
+              Contact Us
+            </a>
+          </p>
+          <p>
+            <a
+              href="/about"
+            >
+              About Us
+            </a>
+          </p>
+          <p>
+            <a
+              href="/shop"
+            >
+              Shop
+            </a>
+          </p>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h2>
+            About Us
+          </h2>
+          <p>
+            Hello and welcome to Treasure Hunting AK! We are an Alaska based reselling shop that fully believes that one person’s trash is another person’s treasure! are passionate about salvaging items, cleaning them up, and getting them into the hands of people who see value in them. We also love to reuse, recycle, and repurpose.
+          </p>
+          <p>
+            We are always on the hunt so head on over to our eBay shop and see what treasures we have found!
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <header>
+      <h1>
+        Treasure Hunting AK
+      </h1>
+      <nav>
+        <p>
+          <a
+            href="/contact"
+          >
+            Contact Us
+          </a>
+        </p>
+        <p>
+          <a
+            href="/about"
+          >
+            About Us
+          </a>
+        </p>
+        <p>
+          <a
+            href="/shop"
+          >
+            Shop
+          </a>
+        </p>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>
+          About Us
+        </h2>
+        <p>
+          Hello and welcome to Treasure Hunting AK! We are an Alaska based reselling shop that fully believes that one person’s trash is another person’s treasure! are passionate about salvaging items, cleaning them up, and getting them into the hands of people who see value in them. We also love to reuse, recycle, and repurpose.
+        </p>
+        <p>
+          We are always on the hunt so head on over to our eBay shop and see what treasures we have found!
+        </p>
+      </section>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
