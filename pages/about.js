@@ -1,10 +1,8 @@
-import Nav from '../components/nav';
 import styles from '../styles/about.module.css';
 
 export default function About() {
   return (
     <>
-      <Nav />
       <main className={styles.main}>
         <section className={styles.section}>
           <h2>About Us</h2>
