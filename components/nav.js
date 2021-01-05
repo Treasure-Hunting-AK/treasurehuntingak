@@ -32,9 +32,6 @@ export default function Nav() {
               <RouterLink href="/contact" color="secondary">
                 Contact
               </RouterLink>
-              <RouterLink href="/" color="secondary">
-                Home
-              </RouterLink>
               <RouterLink href="/about" color="secondary">
                 About
               </RouterLink>
