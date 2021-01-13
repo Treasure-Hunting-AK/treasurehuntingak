@@ -1,7 +1,7 @@
 import { Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   main: {
     marginTop: 100,
   },
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 export default function About() {
   const styles = useStyles();
   return (
-    <Container maxWidth="md" className={styles.main}>
+    <Container maxWidth="sm" className={styles.main}>
       <Typography variant="h4" component="h2" gutterBottom align="center">
         About Us
       </Typography>

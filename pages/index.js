@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import Head from 'next/head';
 import { Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import RouterLink from '../components/global/RouterLink';
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -10,9 +10,9 @@ const useStyles = makeStyles(() => ({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    paddingTop: 150,
     alignItems: 'center',
-    height: '100vh',
+    minHeight: '100vh',
     textAlign: 'center',
   },
   container: {
@@ -41,21 +41,21 @@ export default function App() {
           Discover Alaska
         </Typography>
         <section className={styles.grid}>
-          <Link href="/about">
+          <RouterLink href="/about">
             <div className={styles.card}>
               <h3>About</h3>
             </div>
-          </Link>
-          <Link href="/contact">
+          </RouterLink>
+          <RouterLink href="/contact" variant="contained">
             <div className={styles.card}>
               <h3>Contact</h3>
             </div>
-          </Link>
-          <Link href="/shop">
+          </RouterLink>
+          <RouterLink href="/shop">
             <div className={styles.card}>
               <h3>Shop</h3>
             </div>
-          </Link>
+          </RouterLink>
         </section>
         {/* </main> */}
       </Container>
