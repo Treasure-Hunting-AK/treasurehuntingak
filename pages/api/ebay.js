@@ -11,11 +11,11 @@ const ebay = new Ebay({
 
 export default function handler(req, res) {
   ebay.getAccessToken().then(() => {
-    const keyword = req.query.q || 'antique';
+    const keyword = req.query.q || 'vintage';
     ebay
       .searchItems({
         keyword,
-        limit: '10',
+        limit: '12',
         filter: 'sellers:{treasurehuntingak}',
       })
       .then((d) => {
