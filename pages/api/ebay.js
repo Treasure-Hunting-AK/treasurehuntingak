@@ -1,8 +1,9 @@
 import Ebay from 'ebay-node-api';
+import { EBAY_SECRET_KEY, EBAY_CLIENT_ID } from '../../config';
 
 const ebay = new Ebay({
-  clientID: 'FreedomE-Treastur-PRD-0c8e8a00c-419e85de',
-  clientSecret: 'PRD-c8e8a00c511b-f205-4852-acc9-1ff4',
+  clientID: EBAY_CLIENT_ID,
+  clientSecret: EBAY_SECRET_KEY,
   body: {
     grant_type: 'client_credentials',
     scope: 'https://api.ebay.com/oauth/api_scope',
@@ -10,7 +11,7 @@ const ebay = new Ebay({
 });
 
 export default function handler(req, res) {
-  ebay.getAccessToken().then(() => {
+  return ebay.getAccessToken().then(() => {
     const keyword = req.query.q || 'vintage';
     ebay
       .searchItems({
@@ -21,7 +22,7 @@ export default function handler(req, res) {
       .then((d) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.end(d);
+        res.send(d);
       })
       .catch((err) => {
         res.statusCode = 400;

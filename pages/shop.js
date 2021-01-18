@@ -21,7 +21,6 @@ export default function shop({ data }) {
   let timeout;
 
   function handleSearch(str) {
-    console.log('yeet');
     clearTimeout(timeout);
     timeout = setTimeout(async () => {
       try {
@@ -45,12 +44,16 @@ export default function shop({ data }) {
       <Grid container spacing={4}>
         {results === null &&
           data.map((item) => (
-            <Grid item key={item.id} xs={12} sm={6} md={4} justify="center">
+            <Grid item key={`data ${item.id}`} xs={12} sm={6} md={4}>
               <EbayItem item={item} />
             </Grid>
           ))}
         {results &&
-          results.map((item) => <EbayItem item={item} key={item.id} />)}
+          results.map((item) => (
+            <Grid item key={`result ${item.id}`} xs={12} sm={6} md={4}>
+              <EbayItem item={item} />
+            </Grid>
+          ))}
       </Grid>
     </Container>
   );
