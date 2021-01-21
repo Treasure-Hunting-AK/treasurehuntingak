@@ -6,7 +6,6 @@ import RouterLink from '../components/global/RouterLink';
 const useStyles = makeStyles(() => ({
   header: {
     width: '100%',
-    backgroundImage: `url('https://picsum.photos/id/256/1920/1080')`,
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
@@ -57,7 +56,6 @@ export default function App() {
             </div>
           </RouterLink>
         </section>
-        {/* </main> */}
       </Container>
     </>
   );
