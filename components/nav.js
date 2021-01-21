@@ -2,23 +2,17 @@ import Head from 'next/head';
 import { useState } from 'react';
 import {
   AppBar,
-  Drawer,
   IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   makeStyles,
   Slide,
   Toolbar,
   Typography,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
-import EmailIcon from '@material-ui/icons/Email';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useRouter } from 'next/router';
 import RouterLink from './global/RouterLink';
+import cssStyles from '../styles/nav.module.css';
+import MobileDrawer from './global/MobileDrawer';
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -29,12 +23,16 @@ const useStyles = makeStyles(() => ({
 
 export default function Nav() {
   const router = useRouter();
-  const styles = useStyles();
   const [drawer, setDrawer] = useState();
+  const styles = useStyles();
 
   function handleListItemPress(href) {
-    setDrawer(false);
-    router.push(href);
+    if (href) {
+      setDrawer(false);
+      router.push(href);
+    } else {
+      setDrawer(false);
+    }
   }
 
   return (
@@ -42,42 +40,9 @@ export default function Nav() {
       <Head>
         <title>Treasure Hunting AK</title>
       </Head>
-      <Drawer anchor="left" open={drawer} onClose={() => setDrawer(false)}>
-        <List>
-          <ListItem
-            button
-            onClick={() => handleListItemPress('/about')}
-            key="about"
-          >
-            <ListItemIcon>
-              <EmojiEmotionsIcon />
-            </ListItemIcon>
-            <ListItemText primary="About" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() => handleListItemPress('/contact')}
-            key="contact"
-          >
-            <ListItemIcon>
-              <EmailIcon />
-            </ListItemIcon>
-            <ListItemText primary="Contact us" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() => handleListItemPress('/shop')}
-            key="Shop"
-          >
-            <ListItemIcon>
-              <ShoppingCartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Shop" />
-          </ListItem>
-        </List>
-      </Drawer>
+      <MobileDrawer drawer={drawer} handleClick={handleListItemPress} />
       <Slide in={router.pathname !== '/'}>
-        <AppBar position="fixed">
+        <AppBar position="fixed" className={cssStyles.appBar}>
           <Toolbar>
             <IconButton
               onClick={() => setDrawer((cur) => !cur)}
