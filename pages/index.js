@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import RouterLink from '../components/global/RouterLink';
 
@@ -18,17 +18,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     padding: 20,
     height: theme.breakpoints.up('sm') ? '50vh' : '',
-    // color: '#fdfdfd',
   },
   link: {
     borderWidth: 2,
     borderColor: theme.palette.primary.main,
     borderStyle: 'solid',
-    // padding: 20,
     height: '50vh',
-    [theme.breakpoints.up('sm')]: {
-      height: '50vh',
-    },
     transition: 'all 0.2s',
   },
   box: {
