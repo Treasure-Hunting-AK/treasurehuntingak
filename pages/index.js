@@ -3,19 +3,35 @@ import { Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import RouterLink from '../components/global/RouterLink';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   header: {
     width: '100%',
     flex: 1,
     display: 'flex',
+    backgroundImage: 'url("/mainbackground.jpeg")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     flexDirection: 'column',
     paddingTop: 150,
     alignItems: 'center',
     minHeight: '100vh',
     textAlign: 'center',
+    padding: 20,
+    // color: '#fdfdfd',
   },
-  container: {
-    minHeight: '100vh',
+  link: {
+    borderWidth: 2,
+    borderColor: theme.palette.primary.main,
+    borderStyle: 'solid',
+    margin: 10,
+    padding: 20,
+    transition: 'all 0.2s',
+    '&:hover': {
+      transform: 'scale(1.04)',
+    },
+  },
+  box: {
+    position: 'relative',
   },
 }));
 
@@ -41,19 +57,13 @@ export default function App() {
         </Typography>
         <section className={styles.grid}>
           <RouterLink href="/about">
-            <div className={styles.card}>
-              <h3>About</h3>
-            </div>
+            <div className={styles.link}>about</div>
           </RouterLink>
           <RouterLink href="/contact" variant="contained">
-            <div className={styles.card}>
-              <h3>Contact</h3>
-            </div>
+            <div className={styles.link}>Contact</div>
           </RouterLink>
           <RouterLink href="/shop">
-            <div className={styles.card}>
-              <h3>Shop</h3>
-            </div>
+            <div className={styles.link}>Shop</div>
           </RouterLink>
         </section>
       </Container>

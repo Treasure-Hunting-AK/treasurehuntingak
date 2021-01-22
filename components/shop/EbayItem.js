@@ -19,13 +19,30 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
   },
+
+  card: {
+    position: 'relative',
+    borderRadius: 0,
+    border: 'none',
+    transition: 'all 0.2s',
+    '&:hover': {
+      transform: 'scale(1.05)',
+      zIndex: 2,
+    },
+  },
+
+  content: {
+    borderRight: '1px solid #dddddd',
+    borderLeft: '1px solid #dddddd',
+    borderBottom: '1px solid #dddddd',
+  },
 }));
 
 export default function EbayItem({ item }) {
   const styles = useStyles();
 
   return (
-    <Card>
+    <Card className={styles.card} variant="outlined">
       <CardActionArea href={item.itemWebUrl} target="_blank" rel="noreferrer">
         <CardMedia
           component={() => (
@@ -37,7 +54,7 @@ export default function EbayItem({ item }) {
             />
           )}
         />
-        <CardContent>
+        <CardContent className={styles.content}>
           <Typography variant="body2" component="h2" gutterBottom>
             {item.title}
           </Typography>

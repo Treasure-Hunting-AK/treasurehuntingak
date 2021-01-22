@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
   link: {
     '&:hover': {
       cursor: 'pointer',
+      textDecoration: 'none',
     },
   },
 }));

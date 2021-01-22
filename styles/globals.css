@@ -7,6 +7,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  /* background-color: #5287c7;
+  background-image: radial-gradient(#444cf7 1px, #80deea 1px);
+  background-size: 20px 20px; */
+}
+
 a {
   color: inherit;
   text-decoration: none;

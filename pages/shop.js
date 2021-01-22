@@ -41,7 +41,7 @@ export default function shop({ data }) {
         onChangeCapture={(e) => handleSearch(e.target.value)}
         className={styles.search}
       />
-      <Grid container spacing={4}>
+      <Grid container spacing={1}>
         {results === null &&
           data.map((item) => (
             <Grid item key={`data ${item.id}`} xs={12} sm={6} md={4}>

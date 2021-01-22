@@ -11,13 +11,19 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import { useRouter } from 'next/router';
 import RouterLink from './global/RouterLink';
-import cssStyles from '../styles/nav.module.css';
 import MobileDrawer from './global/MobileDrawer';
 
 const useStyles = makeStyles(() => ({
   title: {
-    color: '#ffffff',
+    color: '#000000',
     flexGrow: 1,
+  },
+  appBar: {
+    boxShadow: 'none',
+    background: 'none',
+    backgroundColor: 'white',
+    border: '1px solid #dddddd',
+    // boxShadow: '0 0 5px 5px #ffffff',
   },
 }));
 
@@ -42,7 +48,7 @@ export default function Nav() {
       </Head>
       <MobileDrawer drawer={drawer} handleClick={handleListItemPress} />
       <Slide in={router.pathname !== '/'}>
-        <AppBar position="fixed" className={cssStyles.appBar}>
+        <AppBar position="fixed" className={styles.appBar}>
           <Toolbar>
             <IconButton
               onClick={() => setDrawer((cur) => !cur)}
