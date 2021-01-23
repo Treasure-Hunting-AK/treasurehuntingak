@@ -1,6 +1,7 @@
 import { Container, Grid, makeStyles, TextField } from '@material-ui/core';
 import { useState } from 'react';
 import EbayItem from '../components/shop/EbayItem';
+import { API_URL } from '../config';
 
 const useStyles = makeStyles(() => ({
   main: {
@@ -24,7 +25,7 @@ export default function shop({ data }) {
     clearTimeout(timeout);
     timeout = setTimeout(async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/ebay/?q=${str}`, {
+        const res = await fetch(`${API_URL}api/ebay/?q=${str}`, {
           method: 'GET',
         }).then((r) => r.json());
         setResults(res.itemSummaries);
@@ -60,12 +61,11 @@ export default function shop({ data }) {
 }
 
 export async function getStaticProps() {
-  // const res = await fetch('http://localhost:3000/api/ebay/', {
-  //   method: 'GET',
-  // }).then((r) => r.json());
+  const res = await fetch(`${API_URL}api/ebay/`, {
+    method: 'GET',
+  }).then((r) => r.json());
 
-  // const data = res.itemSummaries;
-  const data = [];
+  const data = res.itemSummaries;
 
   return {
     props: { data },
