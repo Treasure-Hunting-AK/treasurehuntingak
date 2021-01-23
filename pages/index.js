@@ -1,30 +1,53 @@
 import Head from 'next/head';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import RouterLink from '../components/global/RouterLink';
+import ImageBackground from '../components/global/imageBackground';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     height: '100vh',
   },
   header: {
-    flex: 1,
+    position: 'relative',
+    height: theme.breakpoints.up('sm') ? '50vh' : '',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    padding: 20,
     display: 'flex',
-    backgroundImage: 'url("/mainbackground.jpeg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
+    justifyContent: 'center',
+    color: '#ffffff',
+  },
+  overlay: {
+    height: '100%',
+    widht: '100%',
+    backgroundColor: 'rgba(0,0,0,0.4)',
     padding: 20,
-    height: theme.breakpoints.up('sm') ? '50vh' : '',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
+    color: '#ffffff',
   },
   link: {
-    borderWidth: 2,
-    borderColor: theme.palette.primary.main,
-    borderStyle: 'solid',
     height: '50vh',
-    transition: 'all 0.2s',
+  },
+  linkDiv: {
+    color: '#ffffff',
+    position: 'relative',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    height: '100%',
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 40,
   },
   box: {
     position: 'relative',
@@ -33,6 +56,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const styles = useStyles();
+  const theme = useTheme();
+  const smallScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <>
@@ -41,26 +66,41 @@ export default function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid container spacing={0} className={styles.container}>
-        <Grid item className={styles.header} sm={6} xs={12}>
-          <Typography variant="h3" component="h2">
+        <Grid item className={styles.header} sm={12} xs={12}>
+          <ImageBackground src="/mainbackground.jpeg" />
+          <Typography variant={smallScreen ? 'h2' : 'h1'} component="h2">
             Treasure Hunting AK
-            <Typography
-              variant="subtitle1"
-              className={styles.description}
-              align="center"
-            >
-              Discover Alaska
-            </Typography>
+          </Typography>
+          <Typography variant="subtitle">
+            Discover antique and vintage items from Alaska
           </Typography>
         </Grid>
-        <Grid item sm={6} xs={12} className={styles.link}>
-          <RouterLink href="/about">About</RouterLink>
+        <Grid item sm={4} xs={12} className={styles.link}>
+          <RouterLink href="/shop" className={styles.linkContainer}>
+            <div className={styles.linkDiv}>
+              <ImageBackground src="/DF969074-7EE2-41E2-8073-00161997D7B3.jpg" />
+              <Typography variant="h2">Shop</Typography>
+              <Typography variant="">View our products</Typography>
+            </div>
+          </RouterLink>
         </Grid>
-        <Grid item sm={6} xs={12} className={styles.link}>
-          <RouterLink href="/contact">Contact</RouterLink>
+        <Grid item sm={4} xs={12} className={styles.link}>
+          <RouterLink href="/contact" className={styles.linkContainer}>
+            <div className={styles.linkDiv}>
+              <ImageBackground src="/20E3EA13-B12C-4BA8-886F-7C43C25AE078.jpg" />
+              <Typography variant="h2">Contact</Typography>
+              <Typography>Follow us on social media</Typography>
+            </div>
+          </RouterLink>
         </Grid>
-        <Grid item sm={6} xs={12} className={styles.link}>
-          <RouterLink href="/shop">Shop</RouterLink>
+        <Grid item sm={4} xs={12} className={styles.link}>
+          <RouterLink href="/about" className={styles.linkContainer}>
+            <div className={styles.linkDiv}>
+              <ImageBackground src="/64BE68B5-C28E-4233-9738-664DE3CB1E48.jpg" />
+              <Typography variant="h2">About</Typography>
+              <Typography>Learn about us</Typography>
+            </div>
+          </RouterLink>
         </Grid>
       </Grid>
     </>
