@@ -60,11 +60,12 @@ export default function shop({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/ebay/', {
-    method: 'GET',
-  }).then((r) => r.json());
+  // const res = await fetch('http://localhost:3000/api/ebay/', {
+  //   method: 'GET',
+  // }).then((r) => r.json());
 
-  const data = res.itemSummaries;
+  // const data = res.itemSummaries;
+  const data = [];
 
   return {
     props: { data },
