@@ -41,7 +41,7 @@ export default function shop({ data }) {
   return (
     <>
       <Head>
-        <>Shop</>
+        <title>Shop</title>
         <meta
           description
           content="Welcome to Treasure Hunting AK! We are an Alaska based

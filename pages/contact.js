@@ -31,7 +31,7 @@ export default function contact() {
   return (
     <>
       <Head>
-        <>Contact</>
+        <title>Contact</title>
         <meta
           description
           content="Welcome to Treasure Hunting AK! We are an Alaska based
