@@ -1,7 +1,8 @@
 import { Container, Grid, makeStyles, TextField } from '@material-ui/core';
 import { useState } from 'react';
+import Ebay from 'ebay-node-api';
 import EbayItem from '../components/shop/EbayItem';
-import { API_URL } from '../config';
+import { API_URL, EBAY_SECRET_KEY, EBAY_CLIENT_ID } from '../config';
 
 const useStyles = makeStyles(() => ({
   main: {
@@ -61,11 +62,26 @@ export default function shop({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}api/ebay/`, {
-    method: 'GET',
-  }).then((r) => r.json());
+  const ebay = new Ebay({
+    clientID: EBAY_CLIENT_ID,
+    clientSecret: EBAY_SECRET_KEY,
+    body: {
+      grant_type: 'client_credentials',
+      scope: 'https://api.ebay.com/oauth/api_scope',
+    },
+  });
 
-  const data = res.itemSummaries;
+  const res = await ebay.getAccessToken().then(() =>
+    ebay.searchItems({
+      keyword: 'vintage',
+      limit: '12',
+      filter: 'sellers:{treasurehuntingak}',
+    })
+  );
+
+  const resJson = JSON.parse(res);
+
+  const data = resJson.itemSummaries;
 
   return {
     props: { data },
