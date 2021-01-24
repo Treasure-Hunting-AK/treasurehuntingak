@@ -60,8 +60,8 @@ export default function EbayItem({ item }) {
           </Typography>
 
           <Box className={styles.cardFooter}>
-            <Typography variant="subtitle2" color="textSecondary">
-              {item.condition}
+            <Typography variant="subtitle2" color="secondary">
+              Buy
             </Typography>
             <Typography variant="subtitle2" color="textSecondary">
               ${item.price.value}

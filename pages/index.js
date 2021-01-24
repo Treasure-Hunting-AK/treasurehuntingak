@@ -21,36 +21,13 @@ const useStyles = makeStyles((theme) => ({
     color: '#ffffff',
   },
   overlay: {
+    position: 'absolute',
     height: '100%',
     widht: '100%',
-    backgroundColor: 'rgba(0,0,0,0.4)',
-    padding: 20,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    justifyContent: 'center',
-    color: '#ffffff',
+    backgroundColor: 'rgba(0,0,0,0.8)',
   },
   link: {
     height: '50vh',
-  },
-  linkDiv: {
-    color: '#ffffff',
-    position: 'relative',
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-    height: '100%',
-    width: '100%',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: 40,
-  },
-  box: {
-    position: 'relative',
   },
 }));
 
@@ -76,30 +53,33 @@ export default function App() {
           </Typography>
         </Grid>
         <Grid item sm={4} xs={12} className={styles.link}>
-          <RouterLink href="/shop" className={styles.linkContainer}>
-            <div className={styles.linkDiv}>
-              <ImageBackground src="/DF969074-7EE2-41E2-8073-00161997D7B3.jpg" />
-              <Typography variant="h2">Shop</Typography>
-              <Typography>View our products</Typography>
-            </div>
+          <RouterLink
+            href="/shop"
+            className={styles.linkContainer}
+            color="primary"
+          >
+            <ImageBackground src="/DF969074-7EE2-41E2-8073-00161997D7B3.jpg" />
+            <Typography variant={smallScreen ? 'h4' : 'h2'}>Shop</Typography>
           </RouterLink>
         </Grid>
         <Grid item sm={4} xs={12} className={styles.link}>
-          <RouterLink href="/contact" className={styles.linkContainer}>
-            <div className={styles.linkDiv}>
-              <ImageBackground src="/20E3EA13-B12C-4BA8-886F-7C43C25AE078.jpg" />
-              <Typography variant="h2">Contact</Typography>
-              <Typography>Follow us on social media</Typography>
-            </div>
+          <RouterLink
+            href="/contact"
+            className={styles.linkContainer}
+            color="primary"
+          >
+            <ImageBackground src="/20E3EA13-B12C-4BA8-886F-7C43C25AE078.jpg" />
+            <Typography variant={smallScreen ? 'h4' : 'h2'}>Contact</Typography>
           </RouterLink>
         </Grid>
         <Grid item sm={4} xs={12} className={styles.link}>
-          <RouterLink href="/about" className={styles.linkContainer}>
-            <div className={styles.linkDiv}>
-              <ImageBackground src="/64BE68B5-C28E-4233-9738-664DE3CB1E48.jpg" />
-              <Typography variant="h2">About</Typography>
-              <Typography>Learn about us</Typography>
-            </div>
+          <RouterLink
+            href="/about"
+            className={styles.linkContainer}
+            color="primary"
+          >
+            <ImageBackground src="/64BE68B5-C28E-4233-9738-664DE3CB1E48.jpg" />
+            <Typography variant={smallScreen ? 'h4' : 'h2'}>About</Typography>
           </RouterLink>
         </Grid>
       </Grid>

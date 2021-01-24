@@ -1,13 +1,12 @@
-import { Link } from '@material-ui/core';
+import { Button, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { useRouter } from 'next/router';
 
 const useStyles = makeStyles(() => ({
   link: {
-    '&:hover': {
-      cursor: 'pointer',
-      textDecoration: 'none',
-    },
+    height: '100%',
+    width: '100%',
+    padding: 0,
   },
 }));
 
@@ -25,7 +24,7 @@ export default function RouterLink({
     router.push(href);
   }
   return (
-    <Link
+    <Button
       onClick={handleClick}
       color={color}
       variant={variant}
@@ -34,6 +33,6 @@ export default function RouterLink({
       className={styles.link}
     >
       {children}
-    </Link>
+    </Button>
   );
 }

@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
   main: {
     position: 'relative',
     display: 'flex',
-    top: 60,
+    top: 100,
     alignItems: 'center',
     flexDirection: 'column',
   },
@@ -42,6 +42,7 @@ export default function shop({ data }) {
         label="search"
         onChangeCapture={(e) => handleSearch(e.target.value)}
         className={styles.search}
+        color="secondary"
       />
       <Grid container spacing={1}>
         {results === null &&
