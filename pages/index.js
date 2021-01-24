@@ -71,7 +71,7 @@ export default function App() {
           <Typography variant={smallScreen ? 'h2' : 'h1'} component="h2">
             Treasure Hunting AK
           </Typography>
-          <Typography variant="subtitle">
+          <Typography variant="subtitle1">
             Discover antique and vintage items from Alaska
           </Typography>
         </Grid>
@@ -80,7 +80,7 @@ export default function App() {
             <div className={styles.linkDiv}>
               <ImageBackground src="/DF969074-7EE2-41E2-8073-00161997D7B3.jpg" />
               <Typography variant="h2">Shop</Typography>
-              <Typography variant="">View our products</Typography>
+              <Typography>View our products</Typography>
             </div>
           </RouterLink>
         </Grid>

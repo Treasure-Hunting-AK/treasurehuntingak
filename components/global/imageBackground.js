@@ -12,5 +12,5 @@ const useStyles = makeStyles(() => ({
 
 export default function ImageBackground({ src }) {
   const styles = useStyles();
-  return <Image src={src} className={styles.image} layout="fill" />;
+  return <Image src={src} className={styles.image} layout="fill" priority />;
 }
