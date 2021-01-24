@@ -66,7 +66,7 @@ export default function shop({ data }) {
         />
         <meta
           name="twitter:image"
-          content="https://treasurehuntingak.com/preview.png"
+          content="https://treasurehuntingak.com/preview.jpg"
         />
         {/* end twitter meta data */}
 
@@ -74,7 +74,7 @@ export default function shop({ data }) {
         <meta name="keywords" content="treasure hunting ak" />
         <meta
           property="og:image"
-          content="https://treasurehuntingak.com/preview.png"
+          content="https://treasurehuntingak.com/preview.jpg"
         />
         <meta property="og:title" content="Shop" />
         <meta
