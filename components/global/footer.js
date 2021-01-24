@@ -1,4 +1,4 @@
-import { Container, Link, makeStyles, Typography } from '@material-ui/core';
+import { Link, makeStyles, Typography } from '@material-ui/core';
 import format from 'date-fns/format';
 
 const useStyles = makeStyles((theme) => ({

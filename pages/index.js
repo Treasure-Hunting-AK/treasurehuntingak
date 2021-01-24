@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   overlay: {
     position: 'absolute',
     height: '100%',
-    widht: '100%',
+    width: '100%',
     backgroundColor: 'rgba(0,0,0,0.8)',
   },
   link: {
