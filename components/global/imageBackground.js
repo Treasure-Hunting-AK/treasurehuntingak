@@ -1,4 +1,8 @@
-import { SportsRugbySharp } from '@material-ui/icons';
+/* 
+  Used in index.js for rendering background photos. Reason for creating 
+  component was to utilize Next.js image optomization.
+*/
+
 import { makeStyles } from '@material-ui/styles';
 import Image from 'next/image';
 

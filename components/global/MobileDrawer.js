@@ -1,3 +1,5 @@
+/* Mobile drawer. Renders in nav.js */
+
 import {
   Drawer,
   List,
@@ -10,7 +12,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   drawer: {
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     color: '#ffffff',
@@ -31,18 +33,23 @@ export default function MobileDrawer({ drawer, handleClick }) {
           <ListItemIcon>
             <EmojiEmotionsIcon color="secondary" />
           </ListItemIcon>
+
           <ListItemText primary="About" />
         </ListItem>
+
         <ListItem button onClick={() => handleClick('/contact')} key="contact">
           <ListItemIcon>
             <EmailIcon color="secondary" />
           </ListItemIcon>
+
           <ListItemText primary="Contact us" />
         </ListItem>
+
         <ListItem button onClick={() => handleClick('/shop')} key="Shop">
           <ListItemIcon>
             <ShoppingCartIcon color="secondary" />
           </ListItemIcon>
+
           <ListItemText primary="Shop" />
         </ListItem>
       </List>

@@ -1,4 +1,6 @@
-import { Button, Link } from '@material-ui/core';
+/* Link component, used on index.js buttons and main title button in nav.js */
+
+import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { useRouter } from 'next/router';
 

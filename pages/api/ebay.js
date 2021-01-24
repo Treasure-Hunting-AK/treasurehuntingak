@@ -1,3 +1,8 @@
+/* 
+  handles requests to eBay API. Could have been done on the frontend but needed 
+  to hide API keys from public 
+*/
+
 import Ebay from 'ebay-node-api';
 
 const ebay = new Ebay({

@@ -32,7 +32,7 @@ export default function contact() {
       <Typography variant="h2" gutterBottom>
         Contact Us
       </Typography>
-      <Typography>We'd Love to hear from you</Typography>
+      <Typography>We&apos;d Love to hear from you</Typography>
       <List>
         <ListItem
           href="https://www.ebay.com/usr/treasurehuntingak"

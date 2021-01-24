@@ -43,6 +43,7 @@ export default function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid container spacing={0} className={styles.container}>
+        {/* --- Title section --- */}
         <Grid item className={styles.header} sm={12} xs={12}>
           <ImageBackground src="/mainbackground.jpeg" />
           <Typography variant={smallScreen ? 'h2' : 'h1'} component="h2">
@@ -52,6 +53,9 @@ export default function App() {
             Discover antique and vintage items from Alaska
           </Typography>
         </Grid>
+        {/* --- End title section --- */}
+
+        {/* --- Shop Button --- */}
         <Grid item sm={4} xs={12} className={styles.link}>
           <RouterLink
             href="/shop"
@@ -62,6 +66,9 @@ export default function App() {
             <Typography variant={smallScreen ? 'h4' : 'h2'}>Shop</Typography>
           </RouterLink>
         </Grid>
+        {/* --- End shop button --- */}
+
+        {/* --- Conact Button --- */}
         <Grid item sm={4} xs={12} className={styles.link}>
           <RouterLink
             href="/contact"
@@ -72,6 +79,9 @@ export default function App() {
             <Typography variant={smallScreen ? 'h4' : 'h2'}>Contact</Typography>
           </RouterLink>
         </Grid>
+        {/* --- End Contact button --- */}
+
+        {/* --- Start About Button --- */}
         <Grid item sm={4} xs={12} className={styles.link}>
           <RouterLink
             href="/about"
@@ -83,6 +93,7 @@ export default function App() {
           </RouterLink>
         </Grid>
       </Grid>
+      {/* --- End About button --- */}
     </>
   );
 }

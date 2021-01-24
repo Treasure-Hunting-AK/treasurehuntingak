@@ -1,3 +1,5 @@
+/* Ebay Shop item component */
+
 import {
   Box,
   Card,

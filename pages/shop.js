@@ -22,6 +22,7 @@ export default function shop({ data }) {
   const [results, setResults] = useState(null);
   let timeout;
 
+  // after user stops typing for 0.5s query ebay API
   function handleSearch(str) {
     clearTimeout(timeout);
     timeout = setTimeout(async () => {
@@ -63,6 +64,7 @@ export default function shop({ data }) {
 }
 
 export async function getStaticProps() {
+  // configuration for making requests to ebay API
   const ebay = new Ebay({
     clientID: process.env.EBAY_CLIENT_ID,
     clientSecret: process.env.EBAY_SECRET_KEY,
@@ -72,6 +74,7 @@ export async function getStaticProps() {
     },
   });
 
+  // generate accesstoken and then fetch initial results
   const res = await ebay.getAccessToken().then(() =>
     ebay.searchItems({
       keyword: 'vintage',

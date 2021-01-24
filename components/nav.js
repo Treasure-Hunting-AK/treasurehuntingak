@@ -1,3 +1,5 @@
+/* Renders top bar and mobile drawer */
+
 import Head from 'next/head';
 import { useState } from 'react';
 import {
@@ -33,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
   },
-  nav: {
-    display: 'flex',
-  },
 }));
 
 export default function Nav() {
@@ -43,6 +42,7 @@ export default function Nav() {
   const [drawer, setDrawer] = useState();
   const styles = useStyles();
 
+  // shows/hides drawer
   function handleListItemPress(href) {
     if (href) {
       setDrawer(false);
@@ -52,6 +52,7 @@ export default function Nav() {
     }
   }
 
+  // pushes to specified route
   function handleButtonPress(href) {
     router.push(href);
   }
@@ -61,12 +62,15 @@ export default function Nav() {
       <Head>
         <title>Treasure Hunting AK</title>
       </Head>
+
       <Hidden smUp>
         <MobileDrawer drawer={drawer} handleClick={handleListItemPress} />
       </Hidden>
+
       <Slide in={router.pathname !== '/'}>
         <AppBar position="fixed" className={styles.appBar}>
           <Toolbar>
+            {/* --- Mobile menu button --- */}
             <Hidden smUp>
               <IconButton
                 onClick={() => setDrawer((cur) => !cur)}
@@ -75,13 +79,18 @@ export default function Nav() {
                 <MenuIcon />
               </IconButton>
             </Hidden>
+            {/* --- end mobile menu button --- */}
+
+            {/* --- Title Link --- */}
             <RouterLink href="/" className={styles.title}>
               <Typography variant="h5" component="h1" className={styles.title}>
                 Treasure Hunting AK
               </Typography>
             </RouterLink>
+            {/* --- End title link --- */}
+
+            {/* --- Main Nav --- */}
             <Hidden xsDown>
-              {/* <div className={styles.nav}> */}
               <Button
                 onClick={() => handleButtonPress('/shop')}
                 variant="outlined"
@@ -89,6 +98,7 @@ export default function Nav() {
               >
                 Shop
               </Button>
+
               <Button
                 onClick={() => handleButtonPress('/contact')}
                 variant="outlined"
@@ -96,6 +106,7 @@ export default function Nav() {
               >
                 Contact
               </Button>
+
               <Button
                 onClick={() => handleButtonPress('/about')}
                 variant="outlined"
@@ -104,6 +115,7 @@ export default function Nav() {
                 About
               </Button>
             </Hidden>
+            {/* --- End main nav --- */}
           </Toolbar>
         </AppBar>
       </Slide>
