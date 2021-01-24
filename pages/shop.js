@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
   main: {
     position: 'relative',
     display: 'flex',
-    top: 100,
+    marginTop: 100,
     alignItems: 'center',
     flexDirection: 'column',
   },

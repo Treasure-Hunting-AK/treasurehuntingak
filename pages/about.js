@@ -4,7 +4,8 @@ import Head from 'next/head';
 
 const useStyles = makeStyles(() => ({
   main: {
-    marginTop: 100,
+    position: 'relative',
+    top: 100,
     '& p': {
       marginBottom: 50,
     },
@@ -64,7 +65,7 @@ export default function About() {
       </Head>
 
       <Container maxWidth="sm" className={styles.main}>
-        <Typography variant="h4" component="h2" gutterBottom align="center">
+        <Typography variant="h2" component="h2" gutterBottom align="center">
           About Us
         </Typography>
         <Typography variant="body1" gutterBottom>
