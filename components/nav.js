@@ -5,7 +5,6 @@ import { useState } from 'react';
 import {
   AppBar,
   Button,
-  Divider,
   Hidden,
   IconButton,
   makeStyles,
