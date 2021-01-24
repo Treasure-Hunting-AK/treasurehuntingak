@@ -39,7 +39,51 @@ export default function App() {
   return (
     <>
       <Head>
-        <title>Treasure Hunting AK</title>
+        <>Treasure Hunting Ak</>
+        <meta
+          description
+          content="Welcome to Treasure Hunting AK! We are an Alaska based
+          reselling shop that fully believes that one person's trash is
+          another person's treasure. We're passionate about salvaging
+          items, cleaning them up, and getting them into the hands of people who
+          see value in them. We also love to reuse, recycle, and repurpose."
+        />
+
+        {/* twitter meta data */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Treasure Hunting Ak" />
+        <meta name="twitter:site" content="@TreasureHuntAk" />
+        <meta name="twitter:creator" content="@TreasureHuntAk" />
+        <meta
+          name="twitter:description"
+          content="Welcome to Treasure Hunting AK! We are an Alaska based
+          reselling shop that fully believes that one person's trash is
+          another person's treasure. We're passionate about salvaging
+          items, cleaning them up, and getting them into the hands of people who
+          see value in them. We also love to reuse, recycle, and repurpose."
+        />
+        <meta
+          name="twitter:image"
+          content="https://treasurehuntingak.com/preview.png"
+        />
+        {/* end twitter meta data */}
+
+        {/* social meta data */}
+        <meta name="keywords" content="treasure hunting ak" />
+        <meta
+          property="og:image"
+          content="https://treasurehuntingak.com/preview.png"
+        />
+        <meta property="og:title" content="Treasure Hunting AK" />
+        <meta
+          property="og:description"
+          content="Welcome to Treasure Hunting AK! We are an Alaska based
+          reselling shop that fully believes that one person's trash is
+          another person's treasure. We're passionate about salvaging
+          items, cleaning them up, and getting them into the hands of people who
+          see value in them. We also love to reuse, recycle, and repurpose."
+        />
+        <meta property="og:url" content="https://treasurehuntingak.com/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid container spacing={0} className={styles.container}>
