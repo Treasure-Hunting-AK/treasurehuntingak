@@ -2,7 +2,7 @@ import { Container, Grid, makeStyles, TextField } from '@material-ui/core';
 import { useState } from 'react';
 import Ebay from 'ebay-node-api';
 import EbayItem from '../components/shop/EbayItem';
-import { API_URL, EBAY_SECRET_KEY, EBAY_CLIENT_ID } from '../config';
+import { API_URL } from '../config';
 
 const useStyles = makeStyles(() => ({
   main: {
@@ -63,8 +63,8 @@ export default function shop({ data }) {
 
 export async function getStaticProps() {
   const ebay = new Ebay({
-    clientID: EBAY_CLIENT_ID,
-    clientSecret: EBAY_SECRET_KEY,
+    clientID: process.env.EBAY_CLIENT_ID,
+    clientSecret: process.env.EBAY_SECRET_KEY,
     body: {
       grant_type: 'client_credentials',
       scope: 'https://api.ebay.com/oauth/api_scope',

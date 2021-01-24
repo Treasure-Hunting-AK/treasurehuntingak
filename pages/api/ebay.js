@@ -1,9 +1,8 @@
 import Ebay from 'ebay-node-api';
-import { EBAY_SECRET_KEY, EBAY_CLIENT_ID } from '../../config';
 
 const ebay = new Ebay({
-  clientID: EBAY_CLIENT_ID,
-  clientSecret: EBAY_SECRET_KEY,
+  clientID: process.env.EBAY_CLIENT_ID,
+  clientSecret: process.env.EBAY_SECRET_KEY,
   body: {
     grant_type: 'client_credentials',
     scope: 'https://api.ebay.com/oauth/api_scope',
